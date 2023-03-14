@@ -6,6 +6,7 @@ jobs:
   label:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - uses: faiak/actions/action.yml@main
       with:
         APPCENTER_API_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
