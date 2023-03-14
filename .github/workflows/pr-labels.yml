@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: faiak/actions@main
+    - uses: Investly-id/appcenter-actions@main
       with:
         APPCENTER_API_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
         APPCENTER_PROJECT_NAME: ${{ secrets.APPCENTER_PROJECT_NAME_ANDROID }}
