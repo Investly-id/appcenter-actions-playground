@@ -1,12 +1,14 @@
 name: PR Labeler
 
-on:
-- pull_request
+on: workflow_dispatch
 
 jobs:
   label:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v2
+    - uses: faiak/actions/action.yml@main
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        APPCENTER_API_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
+        APPCENTER_PROJECT_NAME: ${{ secrets.APPCENTER_PROJECT_NAME_ANDROID }}
+        # BRANCH: ${{ github.head_ref || github.ref_name }}
+        BRANCH: releases/v0.0.3
